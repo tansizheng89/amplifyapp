@@ -1,7 +1,7 @@
 import axios from "axios";
 
 //const API_URL = "http://54.89.175.168:8080/webapp/api/";
- const API_URL = "http://localhost:8080/api/";
+ const API_URL = "http://54.236.250.253:8080/api/";
 
 class AuthService {
   login(form) {

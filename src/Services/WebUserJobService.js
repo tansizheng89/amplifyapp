@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const WEBUSERJOB_API_BASE_URL = "http://localhost:8080/api/webuser/";
+const WEBUSERJOB_API_BASE_URL = "http://54.236.250.253:8080/api/webuser/";
 
 function token(){
   let accessToken = localStorage.getItem('user');
@@ -15,7 +15,7 @@ function refreshToken(){
 }
 
 function processRefreshToken(){
-  axios.get("http://localhost:8080/api/user/refreshtoken",refreshToken()).then(response=>{
+  axios.get("http://54.236.250.253:8080/api/user/refreshtoken",refreshToken()).then(response=>{
       localStorage.setItem("user", response.data.access_token);
       localStorage.setItem("userRefreshToken", response.data.refresh_token);
     });
@@ -25,8 +25,8 @@ function processRefreshToken(){
 class DataService {
   getAllJobs() {
     // this is the changes I made. Might need to change back 
-    // return axios.get("http://localhost:8080/api/webuser/job/list");
-    return axios.get("http://54.174.215.223:8080/webapp/api/job/list");
+     return axios.get("http://54.236.250.253:8080/api/webuser/job/list");
+    //return axios.get("http://54.174.215.223:8080/webapp/api/job/list");
   }
   
   getUserUseRefreshToken(){
