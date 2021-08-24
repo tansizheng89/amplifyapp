@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import DataService from "../../Services/WebUserJobService";
 import { Link } from "react-router-dom";
-import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
+
 
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from "@material-ui/core/InputAdornment";

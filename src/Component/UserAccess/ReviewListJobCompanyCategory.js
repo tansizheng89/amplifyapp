@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import DataService1 from "../../Services/WebUserReviewService";
-import { Link } from "react-router-dom";
+
 
   export default class ReviewListJobCompanyCategory extends Component {
     constructor(props) {
