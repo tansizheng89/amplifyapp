@@ -86,7 +86,9 @@ class EditUser extends Component {
             message: "",
             avatarImageUrl:"",
             resume:"",
-            done:false
+            done:false,
+            checkFirstName:false,
+            checkLastName:false,
         };
     }
 
@@ -107,6 +109,7 @@ class EditUser extends Component {
         }); }
     onChangefirstName(e) {
         const firstName = e.target.value;
+        this.setState({checkFirstName:true});
 
         this.setState(function (prevState) {
             return {
@@ -118,6 +121,7 @@ class EditUser extends Component {
         });}
     onChangelastName(e) {
         const lastName = e.target.value;
+        this.setState({checkLastName:true});
 
         this.setState(function (prevState) {
             return {
